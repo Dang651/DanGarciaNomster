@@ -1,0 +1,101 @@
+2017-05-17T03:00:09.472031+00:00 app[web.1]: [96e19575-6016-4997-8c7e-a717f0f1830a]     3:     <h1><%= place.name %></h1><br />
+2017-05-17T03:00:09.472095+00:00 app[web.1]: F, [2017-05-17T03:00:09.472021 #4] FATAL -- : [96e19575-6016-4997-8c7e-a717f0f1830a]   
+2017-05-17T03:00:09.472183+00:00 app[web.1]: F, [2017-05-17T03:00:09.472126 #4] FATAL -- : [96e19575-6016-4997-8c7e-a717f0f1830a] app/views/places/index.html.erb:1:in `_app_views_places_index_html_erb___1722940414253343685_33030260'
+2017-05-17T03:02:07.886598+00:00 heroku[router]: at=info method=GET path="/" host=nomster-dan-garcia.herokuapp.com request_id=008e5833-b44a-41df-b591-cbbd8d2e78a9 fwd="172.91.236.224" dyno=web.1 connect=1ms service=15ms status=500 bytes=1827 protocol=http
+2017-05-17T03:02:07.874770+00:00 app[web.1]: I, [2017-05-17T03:02:07.874676 #4]  INFO -- : [008e5833-b44a-41df-b591-cbbd8d2e78a9] Started GET "/" for 172.91.236.224 at 2017-05-17 03:02:07 +0000
+2017-05-17T03:02:07.875498+00:00 app[web.1]: I, [2017-05-17T03:02:07.875434 #4]  INFO -- : [008e5833-b44a-41df-b591-cbbd8d2e78a9] Processing by PlacesController#index as HTML
+2017-05-17T03:02:07.876242+00:00 app[web.1]: I, [2017-05-17T03:02:07.876175 #4]  INFO -- : [008e5833-b44a-41df-b591-cbbd8d2e78a9]   Rendering places/index.html.erb within layouts/application
+2017-05-17T03:02:07.880535+00:00 app[web.1]: D, [2017-05-17T03:02:07.880455 #4] DEBUG -- : [008e5833-b44a-41df-b591-cbbd8d2e78a9]   [1m[36mPlace Load (2.8ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+2017-05-17T03:02:07.881593+00:00 app[web.1]: I, [2017-05-17T03:02:07.881503 #4]  INFO -- : [008e5833-b44a-41df-b591-cbbd8d2e78a9]   Rendered places/index.html.erb within layouts/application (5.2ms)
+2017-05-17T03:02:07.881946+00:00 app[web.1]: I, [2017-05-17T03:02:07.881858 #4]  INFO -- : [008e5833-b44a-41df-b591-cbbd8d2e78a9] Completed 500 Internal Server Error in 6ms (ActiveRecord: 2.8ms)
+2017-05-17T03:02:07.885676+00:00 app[web.1]: F, [2017-05-17T03:02:07.885573 #4] FATAL -- : [008e5833-b44a-41df-b591-cbbd8d2e78a9]   
+2017-05-17T03:02:07.885746+00:00 app[web.1]: LINE 1: SELECT "places".* FROM "places"
+2017-05-17T03:02:07.885743+00:00 app[web.1]: F, [2017-05-17T03:02:07.885661 #4] FATAL -- : [008e5833-b44a-41df-b591-cbbd8d2e78a9] ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "places" does not exist
+2017-05-17T03:02:07.885747+00:00 app[web.1]:                                ^
+2017-05-17T03:02:07.885747+00:00 app[web.1]: : SELECT "places".* FROM "places"):
+2017-05-17T03:02:07.886020+00:00 app[web.1]: F, [2017-05-17T03:02:07.885936 #4] FATAL -- : [008e5833-b44a-41df-b591-cbbd8d2e78a9]     1: <% @places.each do |place| %>
+2017-05-17T03:02:07.886022+00:00 app[web.1]: [008e5833-b44a-41df-b591-cbbd8d2e78a9]     2:   <div>
+2017-05-17T03:02:07.886023+00:00 app[web.1]: [008e5833-b44a-41df-b591-cbbd8d2e78a9]     3:     <h1><%= place.name %></h1><br />
+2017-05-17T03:02:07.886193+00:00 app[web.1]: F, [2017-05-17T03:02:07.886097 #4] FATAL -- : [008e5833-b44a-41df-b591-cbbd8d2e78a9] app/views/places/index.html.erb:1:in `_app_views_places_index_html_erb___1722940414253343685_33030260'
+2017-05-17T03:02:07.886024+00:00 app[web.1]: [008e5833-b44a-41df-b591-cbbd8d2e78a9]     4:     <i><%= place.address %></i><br />
+2017-05-17T03:02:07.886086+00:00 app[web.1]: F, [2017-05-17T03:02:07.886015 #4] FATAL -- : [008e5833-b44a-41df-b591-cbbd8d2e78a9]   
+2017-05-17T03:02:08.351008+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=nomster-dan-garcia.herokuapp.com request_id=c5d2bd12-c990-4566-8c7b-c5b1013f2fa2 fwd="172.91.236.224" dyno=web.1 connect=1ms service=1ms status=200 bytes=143 protocol=http
+2017-05-17T03:07:43.532414+00:00 heroku[run.5151]: State changed from starting to up
+2017-05-17T03:07:43.518383+00:00 heroku[run.5151]: Awaiting client
+2017-05-17T03:07:43.593679+00:00 heroku[run.5151]: Starting process with command `bundle exec rake db:migrate`
+2017-05-17T03:07:52.269314+00:00 heroku[run.5151]: State changed from up to complete
+2017-05-17T03:07:52.258929+00:00 heroku[run.5151]: Process exited with status 0
+2017-05-17T03:08:14.750270+00:00 heroku[web.1]: Restarting
+2017-05-17T03:08:14.750938+00:00 heroku[web.1]: State changed from up to starting
+2017-05-17T03:08:15.401135+00:00 app[web.1]: Exiting
+2017-05-17T03:08:15.400765+00:00 app[web.1]: - Gracefully stopping, waiting for requests to finish
+2017-05-17T03:08:15.400990+00:00 app[web.1]: === puma shutdown: 2017-05-17 03:08:15 +0000 ===
+2017-05-17T03:08:15.400992+00:00 app[web.1]: - Goodbye!
+2017-05-17T03:08:15.391516+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2017-05-17T03:08:15.529748+00:00 heroku[web.1]: Process exited with status 0
+2017-05-17T03:08:17.527859+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 42063 -e production`
+2017-05-17T03:08:22.415518+00:00 heroku[web.1]: State changed from starting to up
+2017-05-17T03:08:22.356904+00:00 app[web.1]: => Booting Puma
+2017-05-17T03:08:22.356921+00:00 app[web.1]: => Rails 5.0.3 application starting in production on http://0.0.0.0:42063
+2017-05-17T03:08:22.356922+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2017-05-17T03:08:22.356928+00:00 app[web.1]: * Version 3.8.2 (ruby 2.3.4-p301), codename: Sassy Salamander
+2017-05-17T03:08:22.356923+00:00 app[web.1]: Puma starting in single mode...
+2017-05-17T03:08:22.356929+00:00 app[web.1]: * Min threads: 5, max threads: 5
+2017-05-17T03:08:22.357494+00:00 app[web.1]: Use Ctrl-C to stop
+2017-05-17T03:08:22.356930+00:00 app[web.1]: * Environment: production
+2017-05-17T03:08:22.357008+00:00 app[web.1]: * Listening on tcp://0.0.0.0:42063
+2017-05-17T03:10:01.138825+00:00 heroku[router]: at=info method=GET path="/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" host=nomster-dan-garcia.herokuapp.com request_id=c0ce87b9-a696-4183-9c8f-9f8222e4988d fwd="172.91.236.224" dyno=web.1 connect=0ms service=1ms status=200 bytes=195 protocol=http
+2017-05-17T03:10:00.973817+00:00 app[web.1]: I, [2017-05-17T03:10:00.973679 #4]  INFO -- : [655ee17f-c495-40d6-88b0-e852031e7e25] Started GET "/" for 172.91.236.224 at 2017-05-17 03:10:00 +0000
+2017-05-17T03:10:00.975456+00:00 app[web.1]: I, [2017-05-17T03:10:00.975397 #4]  INFO -- : [655ee17f-c495-40d6-88b0-e852031e7e25] Processing by PlacesController#index as HTML
+2017-05-17T03:10:00.984110+00:00 app[web.1]: I, [2017-05-17T03:10:00.984036 #4]  INFO -- : [655ee17f-c495-40d6-88b0-e852031e7e25]   Rendering places/index.html.erb within layouts/application
+2017-05-17T03:10:01.019676+00:00 app[web.1]: D, [2017-05-17T03:10:01.019556 #4] DEBUG -- : [655ee17f-c495-40d6-88b0-e852031e7e25]   [1m[36mPlace Load (1.4ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+2017-05-17T03:10:01.023826+00:00 app[web.1]: I, [2017-05-17T03:10:01.023755 #4]  INFO -- : [655ee17f-c495-40d6-88b0-e852031e7e25]   Rendered places/index.html.erb within layouts/application (39.6ms)
+2017-05-17T03:10:01.028839+00:00 app[web.1]: I, [2017-05-17T03:10:01.028767 #4]  INFO -- : [655ee17f-c495-40d6-88b0-e852031e7e25] Completed 200 OK in 53ms (Views: 45.7ms | ActiveRecord: 14.2ms)
+2017-05-17T03:10:01.030012+00:00 heroku[router]: at=info method=GET path="/" host=nomster-dan-garcia.herokuapp.com request_id=655ee17f-c495-40d6-88b0-e852031e7e25 fwd="172.91.236.224" dyno=web.1 connect=0ms service=59ms status=200 bytes=1322 protocol=http
+2017-05-17T03:10:01.228498+00:00 heroku[router]: at=info method=GET path="/assets/application-731eb6bd5d68d47eb9b931e7f005a458f11d76b23a517cc0bd892977bc948817.js" host=nomster-dan-garcia.herokuapp.com request_id=6286287e-e069-4d9f-bcdd-412170f33c25 fwd="172.91.236.224" dyno=web.1 connect=0ms service=3ms status=200 bytes=46554 protocol=http
+2017-05-17T03:10:01.680574+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=nomster-dan-garcia.herokuapp.com request_id=329d946e-b14b-4007-91f1-f225bd9cd8a0 fwd="172.91.236.224" dyno=web.1 connect=15ms service=12ms status=200 bytes=143 protocol=http
+2017-05-17T03:11:03.190560+00:00 heroku[router]: at=info method=GET path="/" host=nomster-dan-garcia.herokuapp.com request_id=14c68b9f-0c2e-4336-abd6-ea80409d6071 fwd="172.91.236.224" dyno=web.1 connect=0ms service=9ms status=200 bytes=1322 protocol=http
+2017-05-17T03:11:03.180562+00:00 app[web.1]: I, [2017-05-17T03:11:03.180462 #4]  INFO -- : [14c68b9f-0c2e-4336-abd6-ea80409d6071] Started GET "/" for 172.91.236.224 at 2017-05-17 03:11:03 +0000
+2017-05-17T03:11:03.181533+00:00 app[web.1]: I, [2017-05-17T03:11:03.181446 #4]  INFO -- : [14c68b9f-0c2e-4336-abd6-ea80409d6071] Processing by PlacesController#index as HTML
+2017-05-17T03:11:03.185396+00:00 app[web.1]: D, [2017-05-17T03:11:03.185309 #4] DEBUG -- : [14c68b9f-0c2e-4336-abd6-ea80409d6071]   [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+2017-05-17T03:11:03.185740+00:00 app[web.1]: I, [2017-05-17T03:11:03.185664 #4]  INFO -- : [14c68b9f-0c2e-4336-abd6-ea80409d6071]   Rendered places/index.html.erb within layouts/application (2.9ms)
+2017-05-17T03:11:03.182652+00:00 app[web.1]: I, [2017-05-17T03:11:03.182580 #4]  INFO -- : [14c68b9f-0c2e-4336-abd6-ea80409d6071]   Rendering places/index.html.erb within layouts/application
+2017-05-17T03:11:03.186730+00:00 app[web.1]: I, [2017-05-17T03:11:03.186659 #4]  INFO -- : [14c68b9f-0c2e-4336-abd6-ea80409d6071] Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.0ms)
+2017-05-17T03:11:03.564956+00:00 heroku[router]: at=info method=GET path="/assets/application-731eb6bd5d68d47eb9b931e7f005a458f11d76b23a517cc0bd892977bc948817.js" host=nomster-dan-garcia.herokuapp.com request_id=54d50921-3a24-4e81-8ac5-17814ca58ff9 fwd="172.91.236.224" dyno=web.1 connect=0ms service=3ms status=200 bytes=46554 protocol=http
+2017-05-17T03:11:03.476161+00:00 heroku[router]: at=info method=GET path="/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" host=nomster-dan-garcia.herokuapp.com request_id=52318260-58a3-44c3-ac73-b16cc33e7cdc fwd="172.91.236.224" dyno=web.1 connect=0ms service=1ms status=200 bytes=195 protocol=http
+2017-05-17T03:11:35.096468+00:00 heroku[router]: at=info method=GET path="/" host=nomster-dan-garcia.herokuapp.com request_id=2303e41f-383c-4017-a33d-2772f383a80b fwd="172.91.236.224" dyno=web.1 connect=0ms service=12ms status=200 bytes=1322 protocol=https
+2017-05-17T03:11:35.083797+00:00 app[web.1]: I, [2017-05-17T03:11:35.083684 #4]  INFO -- : [2303e41f-383c-4017-a33d-2772f383a80b] Started GET "/" for 172.91.236.224 at 2017-05-17 03:11:35 +0000
+2017-05-17T03:11:35.084816+00:00 app[web.1]: I, [2017-05-17T03:11:35.084738 #4]  INFO -- : [2303e41f-383c-4017-a33d-2772f383a80b] Processing by PlacesController#index as HTML
+2017-05-17T03:11:35.090643+00:00 app[web.1]: D, [2017-05-17T03:11:35.090567 #4] DEBUG -- : [2303e41f-383c-4017-a33d-2772f383a80b]   [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+2017-05-17T03:11:35.086170+00:00 app[web.1]: I, [2017-05-17T03:11:35.086117 #4]  INFO -- : [2303e41f-383c-4017-a33d-2772f383a80b]   Rendering places/index.html.erb within layouts/application
+2017-05-17T03:11:35.090991+00:00 app[web.1]: I, [2017-05-17T03:11:35.090914 #4]  INFO -- : [2303e41f-383c-4017-a33d-2772f383a80b]   Rendered places/index.html.erb within layouts/application (4.6ms)
+2017-05-17T03:11:35.091719+00:00 app[web.1]: I, [2017-05-17T03:11:35.091656 #4]  INFO -- : [2303e41f-383c-4017-a33d-2772f383a80b] Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 1.1ms)
+2017-05-17T03:11:35.335126+00:00 heroku[router]: at=info method=GET path="/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" host=nomster-dan-garcia.herokuapp.com request_id=8c9a0be6-b4e6-4e4d-9a90-2b98dd734c7d fwd="172.91.236.224" dyno=web.1 connect=1ms service=1ms status=200 bytes=195 protocol=https
+2017-05-17T03:11:35.422024+00:00 heroku[router]: at=info method=GET path="/assets/application-731eb6bd5d68d47eb9b931e7f005a458f11d76b23a517cc0bd892977bc948817.js" host=nomster-dan-garcia.herokuapp.com request_id=ce2994aa-a482-4898-8660-dfc320f59470 fwd="172.91.236.224" dyno=web.1 connect=0ms service=2ms status=200 bytes=46554 protocol=https
+2017-05-17T03:13:05.264548+00:00 heroku[router]: at=info method=GET path="/" host=nomster-dan-garcia.herokuapp.com request_id=0ecc05ce-3c83-4aa1-8c48-7b5fef9a9b5e fwd="172.91.236.224" dyno=web.1 connect=0ms service=9ms status=200 bytes=1322 protocol=https
+2017-05-17T03:13:05.254919+00:00 app[web.1]: I, [2017-05-17T03:13:05.254846 #4]  INFO -- : [0ecc05ce-3c83-4aa1-8c48-7b5fef9a9b5e] Processing by PlacesController#index as HTML
+2017-05-17T03:13:05.256182+00:00 app[web.1]: I, [2017-05-17T03:13:05.256113 #4]  INFO -- : [0ecc05ce-3c83-4aa1-8c48-7b5fef9a9b5e]   Rendering places/index.html.erb within layouts/application
+2017-05-17T03:13:05.259059+00:00 app[web.1]: D, [2017-05-17T03:13:05.258982 #4] DEBUG -- : [0ecc05ce-3c83-4aa1-8c48-7b5fef9a9b5e]   [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+2017-05-17T03:13:05.259360+00:00 app[web.1]: I, [2017-05-17T03:13:05.259294 #4]  INFO -- : [0ecc05ce-3c83-4aa1-8c48-7b5fef9a9b5e]   Rendered places/index.html.erb within layouts/application (3.0ms)
+2017-05-17T03:13:05.260302+00:00 app[web.1]: I, [2017-05-17T03:13:05.260232 #4]  INFO -- : [0ecc05ce-3c83-4aa1-8c48-7b5fef9a9b5e] Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.1ms)
+2017-05-17T03:13:05.254087+00:00 app[web.1]: I, [2017-05-17T03:13:05.253973 #4]  INFO -- : [0ecc05ce-3c83-4aa1-8c48-7b5fef9a9b5e] Started GET "/" for 172.91.236.224 at 2017-05-17 03:13:05 +0000
+2017-05-17T03:13:05.429332+00:00 heroku[router]: at=info method=GET path="/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" host=nomster-dan-garcia.herokuapp.com request_id=2267a056-aec7-44ac-8b57-93aba950ac50 fwd="172.91.236.224" dyno=web.1 connect=0ms service=2ms status=304 bytes=48 protocol=https
+2017-05-17T03:13:05.520808+00:00 heroku[router]: at=info method=GET path="/assets/application-731eb6bd5d68d47eb9b931e7f005a458f11d76b23a517cc0bd892977bc948817.js" host=nomster-dan-garcia.herokuapp.com request_id=d0cb5e3a-5843-4875-9ca6-9a2d6b13b869 fwd="172.91.236.224" dyno=web.1 connect=4ms service=2ms status=304 bytes=48 protocol=https
+2017-05-17T03:13:10.370648+00:00 heroku[router]: at=info method=GET path="/" host=nomster-dan-garcia.herokuapp.com request_id=0f407a3a-5405-4176-9fd2-9890b4355d87 fwd="172.91.236.224" dyno=web.1 connect=0ms service=10ms status=200 bytes=1322 protocol=https
+2017-05-17T03:13:10.361126+00:00 app[web.1]: I, [2017-05-17T03:13:10.361036 #4]  INFO -- : [0f407a3a-5405-4176-9fd2-9890b4355d87] Started GET "/" for 172.91.236.224 at 2017-05-17 03:13:10 +0000
+2017-05-17T03:13:10.361982+00:00 app[web.1]: I, [2017-05-17T03:13:10.361910 #4]  INFO -- : [0f407a3a-5405-4176-9fd2-9890b4355d87] Processing by PlacesController#index as HTML
+2017-05-17T03:13:10.363116+00:00 app[web.1]: I, [2017-05-17T03:13:10.363038 #4]  INFO -- : [0f407a3a-5405-4176-9fd2-9890b4355d87]   Rendering places/index.html.erb within layouts/application
+2017-05-17T03:13:10.365681+00:00 app[web.1]: D, [2017-05-17T03:13:10.365594 #4] DEBUG -- : [0f407a3a-5405-4176-9fd2-9890b4355d87]   [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+2017-05-17T03:13:10.365933+00:00 app[web.1]: I, [2017-05-17T03:13:10.365857 #4]  INFO -- : [0f407a3a-5405-4176-9fd2-9890b4355d87]   Rendered places/index.html.erb within layouts/application (2.7ms)
+2017-05-17T03:13:10.366683+00:00 app[web.1]: I, [2017-05-17T03:13:10.366608 #4]  INFO -- : [0f407a3a-5405-4176-9fd2-9890b4355d87] Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.0ms)
+2017-05-17T03:13:10.535711+00:00 heroku[router]: at=info method=GET path="/assets/application-731eb6bd5d68d47eb9b931e7f005a458f11d76b23a517cc0bd892977bc948817.js" host=nomster-dan-garcia.herokuapp.com request_id=c3f5ebfa-710f-4c00-8d8b-299e9073af98 fwd="172.91.236.224" dyno=web.1 connect=7ms service=1ms status=304 bytes=48 protocol=https
+2017-05-17T03:13:10.537712+00:00 heroku[router]: at=info method=GET path="/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" host=nomster-dan-garcia.herokuapp.com request_id=56516f7a-1bef-4f29-8b03-ec1fcbc7f804 fwd="172.91.236.224" dyno=web.1 connect=8ms service=2ms status=304 bytes=48 protocol=https
+2017-05-17T03:13:18.708270+00:00 heroku[router]: at=info method=GET path="/" host=nomster-dan-garcia.herokuapp.com request_id=aca8b1da-dc18-4d8d-b18a-5e1e24f4d194 fwd="172.91.236.224" dyno=web.1 connect=0ms service=11ms status=200 bytes=1322 protocol=http
+2017-05-17T03:13:18.696472+00:00 app[web.1]: I, [2017-05-17T03:13:18.696367 #4]  INFO -- : [aca8b1da-dc18-4d8d-b18a-5e1e24f4d194] Started GET "/" for 172.91.236.224 at 2017-05-17 03:13:18 +0000
+2017-05-17T03:13:18.697306+00:00 app[web.1]: I, [2017-05-17T03:13:18.697236 #4]  INFO -- : [aca8b1da-dc18-4d8d-b18a-5e1e24f4d194] Processing by PlacesController#index as HTML
+2017-05-17T03:13:18.698434+00:00 app[web.1]: I, [2017-05-17T03:13:18.698361 #4]  INFO -- : [aca8b1da-dc18-4d8d-b18a-5e1e24f4d194]   Rendering places/index.html.erb within layouts/application
+2017-05-17T03:13:18.702004+00:00 app[web.1]: I, [2017-05-17T03:13:18.701927 #4]  INFO -- : [aca8b1da-dc18-4d8d-b18a-5e1e24f4d194]   Rendered places/index.html.erb within layouts/application (3.4ms)
+2017-05-17T03:13:18.701555+00:00 app[web.1]: D, [2017-05-17T03:13:18.701445 #4] DEBUG -- : [aca8b1da-dc18-4d8d-b18a-5e1e24f4d194]   [1m[36mPlace Load (1.2ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+2017-05-17T03:13:18.703832+00:00 app[web.1]: I, [2017-05-17T03:13:18.703612 #4]  INFO -- : [aca8b1da-dc18-4d8d-b18a-5e1e24f4d194] Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.2ms)
+2017-05-17T03:13:18.832487+00:00 heroku[router]: at=info method=GET path="/assets/application-731eb6bd5d68d47eb9b931e7f005a458f11d76b23a517cc0bd892977bc948817.js" host=nomster-dan-garcia.herokuapp.com request_id=5aeaa87b-f77a-406a-bf55-f8349698449b fwd="172.91.236.224" dyno=web.1 connect=0ms service=3ms status=304 bytes=48 protocol=http
+2017-05-17T03:13:19.227723+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=nomster-dan-garcia.herokuapp.com request_id=c43551d1-03c2-4fb8-937c-56d8f5747557 fwd="172.91.236.224" dyno=web.1 connect=0ms service=9ms status=200 bytes=143 protocol=http
