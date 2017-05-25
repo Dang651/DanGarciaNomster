@@ -1,101 +1,101 @@
-2017-05-23T23:26:01.073890+00:00 app[web.1]: D, [2017-05-23T23:26:01.073814 #4] DEBUG -- : [427de67c-dd94-4a59-8fbf-d4ff27cbd8f9]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-23T23:26:01.101057+00:00 app[web.1]: I, [2017-05-23T23:26:01.101000 #4]  INFO -- : [427de67c-dd94-4a59-8fbf-d4ff27cbd8f9] Completed 200 OK in 123ms (Views: 40.9ms | ActiveRecord: 28.6ms)
-2017-05-23T23:26:01.084803+00:00 app[web.1]: D, [2017-05-23T23:26:01.084731 #4] DEBUG -- : [427de67c-dd94-4a59-8fbf-d4ff27cbd8f9]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-23T23:26:01.085664+00:00 app[web.1]: D, [2017-05-23T23:26:01.085611 #4] DEBUG -- : [427de67c-dd94-4a59-8fbf-d4ff27cbd8f9]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-23T23:26:01.086506+00:00 app[web.1]: D, [2017-05-23T23:26:01.086422 #4] DEBUG -- : [427de67c-dd94-4a59-8fbf-d4ff27cbd8f9]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-23T23:26:01.087337+00:00 app[web.1]: D, [2017-05-23T23:26:01.087286 #4] DEBUG -- : [427de67c-dd94-4a59-8fbf-d4ff27cbd8f9]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-23T23:26:01.095886+00:00 app[web.1]: I, [2017-05-23T23:26:01.095825 #4]  INFO -- : [427de67c-dd94-4a59-8fbf-d4ff27cbd8f9]   Rendered places/index.html.erb within layouts/application (41.5ms)
-2017-05-23T23:57:54.319295+00:00 heroku[web.1]: Idling
-2017-05-23T23:57:54.319825+00:00 heroku[web.1]: State changed from up to down
-2017-05-23T23:57:54.734668+00:00 app[web.1]: - Gracefully stopping, waiting for requests to finish
-2017-05-23T23:57:54.735084+00:00 app[web.1]: === puma shutdown: 2017-05-23 23:57:54 +0000 ===
-2017-05-23T23:57:54.735091+00:00 app[web.1]: - Goodbye!
-2017-05-23T23:57:54.735093+00:00 app[web.1]: Exiting
-2017-05-23T23:57:54.730494+00:00 heroku[web.1]: Stopping all processes with SIGTERM
-2017-05-23T23:57:54.826104+00:00 heroku[web.1]: Process exited with status 0
-2017-05-24T16:42:53.196914+00:00 heroku[web.1]: Unidling
-2017-05-24T16:42:53.197324+00:00 heroku[web.1]: State changed from down to starting
-2017-05-24T16:42:56.518302+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 44693 -e production`
-2017-05-24T16:43:01.095550+00:00 app[web.1]: => Rails 5.0.3 application starting in production on http://0.0.0.0:44693
-2017-05-24T16:43:01.095529+00:00 app[web.1]: => Booting Puma
-2017-05-24T16:43:01.095551+00:00 app[web.1]: => Run `rails server -h` for more startup options
-2017-05-24T16:43:01.095556+00:00 app[web.1]: Puma starting in single mode...
-2017-05-24T16:43:01.095556+00:00 app[web.1]: * Version 3.8.2 (ruby 2.3.4-p301), codename: Sassy Salamander
-2017-05-24T16:43:01.095557+00:00 app[web.1]: * Min threads: 5, max threads: 5
-2017-05-24T16:43:01.095575+00:00 app[web.1]: * Environment: production
-2017-05-24T16:43:01.095712+00:00 app[web.1]: * Listening on tcp://0.0.0.0:44693
-2017-05-24T16:43:01.096194+00:00 app[web.1]: Use Ctrl-C to stop
-2017-05-24T16:43:01.569431+00:00 heroku[web.1]: State changed from starting to up
-2017-05-24T16:43:02.264273+00:00 app[web.1]: I, [2017-05-24T16:43:02.264172 #4]  INFO -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956] Started GET "/" for 172.91.236.224 at 2017-05-24 16:43:02 +0000
-2017-05-24T16:43:02.268672+00:00 app[web.1]: I, [2017-05-24T16:43:02.268605 #4]  INFO -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956] Processing by PlacesController#index as HTML
-2017-05-24T16:43:02.325229+00:00 app[web.1]: D, [2017-05-24T16:43:02.325117 #4] DEBUG -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956]   [1m[36mPlace Load (6.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" ORDER BY "places"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
-2017-05-24T16:43:02.344564+00:00 app[web.1]: I, [2017-05-24T16:43:02.344454 #4]  INFO -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956]   Rendering places/index.html.erb within layouts/application
-2017-05-24T16:43:02.369082+00:00 app[web.1]: D, [2017-05-24T16:43:02.368369 #4] DEBUG -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-24T16:43:02.347950+00:00 app[web.1]: D, [2017-05-24T16:43:02.347885 #4] DEBUG -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956]   [1m[36mPlace Load (1.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
-2017-05-24T16:43:02.386948+00:00 app[web.1]: D, [2017-05-24T16:43:02.386826 #4] DEBUG -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-24T16:43:02.388509+00:00 app[web.1]: D, [2017-05-24T16:43:02.388431 #4] DEBUG -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-24T16:43:02.390014+00:00 app[web.1]: D, [2017-05-24T16:43:02.389937 #4] DEBUG -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-24T16:43:02.391519+00:00 app[web.1]: D, [2017-05-24T16:43:02.391446 #4] DEBUG -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-24T16:43:02.393099+00:00 app[web.1]: D, [2017-05-24T16:43:02.393011 #4] DEBUG -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-24T16:43:02.396198+00:00 app[web.1]: D, [2017-05-24T16:43:02.396114 #4] DEBUG -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-24T16:43:02.397775+00:00 app[web.1]: D, [2017-05-24T16:43:02.397694 #4] DEBUG -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-24T16:43:02.394744+00:00 app[web.1]: D, [2017-05-24T16:43:02.394577 #4] DEBUG -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-24T16:43:02.403813+00:00 app[web.1]: D, [2017-05-24T16:43:02.403727 #4] DEBUG -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956]   [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "places"[0m
-2017-05-24T16:43:02.421274+00:00 app[web.1]: I, [2017-05-24T16:43:02.421157 #4]  INFO -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956]   Rendered places/index.html.erb within layouts/application (76.5ms)
-2017-05-24T16:43:02.399503+00:00 app[web.1]: D, [2017-05-24T16:43:02.399339 #4] DEBUG -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-24T16:43:02.429890+00:00 app[web.1]: I, [2017-05-24T16:43:02.429798 #4]  INFO -- : [0f8b7f06-cb77-4c21-b500-5824c5dd7956] Completed 200 OK in 161ms (Views: 75.3ms | ActiveRecord: 35.8ms)
-2017-05-24T16:43:02.433678+00:00 heroku[router]: at=info method=GET path="/" host=nomster-dan-garcia.herokuapp.com request_id=0f8b7f06-cb77-4c21-b500-5824c5dd7956 fwd="172.91.236.224" dyno=web.1 connect=1ms service=171ms status=200 bytes=5522 protocol=https
-2017-05-24T16:43:02.709310+00:00 heroku[router]: at=info method=GET path="/assets/application-2811c92dd1da99b11664385ef2828196ffe5f555b33f8480f765d520bfd9a169.js" host=nomster-dan-garcia.herokuapp.com request_id=d96488df-f6df-4d80-ad68-b90e2b721fb5 fwd="172.91.236.224" dyno=web.1 connect=1ms service=1ms status=304 bytes=48 protocol=https
-2017-05-24T16:43:02.625105+00:00 heroku[router]: at=info method=GET path="/assets/application-5ef3b73a0cf1e2dc8b93e515ccb268f07efc53bb6fbf597016f577daf1f2fa03.css" host=nomster-dan-garcia.herokuapp.com request_id=94f7cece-2359-4bf2-a939-b16fc8be0e67 fwd="172.91.236.224" dyno=web.1 connect=1ms service=2ms status=304 bytes=48 protocol=https
-2017-05-24T16:43:03.021769+00:00 heroku[router]: at=info method=GET path="/assets/crossword-2f23f323330dd47e39b3af4892097e56ef0cabf5980e4c2ed794f58d4f629437.png" host=nomster-dan-garcia.herokuapp.com request_id=b46379ee-58dc-4f43-80ab-b82c1fdd0545 fwd="172.91.236.224" dyno=web.1 connect=1ms service=1ms status=304 bytes=48 protocol=https
-2017-05-24T16:43:03.041970+00:00 heroku[router]: at=info method=GET path="/assets/cartographer-5fc0674ab5bc35c0f71dd40cce8c92414ecb7977bba0cc64b7c78cb435f5f0bf.png" host=nomster-dan-garcia.herokuapp.com request_id=4f87e838-7740-45b1-a982-c9921863e343 fwd="172.91.236.224" dyno=web.1 connect=0ms service=1ms status=304 bytes=48 protocol=https
-2017-05-24T16:43:03.106697+00:00 heroku[router]: at=info method=GET path="/assets/chunkfive-webfont-17f6065603d4d222d2febdfc1d03a1714fb558cdc9ba67d6d3185c4f3a3dab4f.woff2" host=nomster-dan-garcia.herokuapp.com request_id=1edcec91-9713-45a3-ba0e-164a3e9254ca fwd="172.91.236.224" dyno=web.1 connect=1ms service=1ms status=304 bytes=48 protocol=https
-2017-05-24T16:43:03.133362+00:00 heroku[router]: at=info method=GET path="/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" host=nomster-dan-garcia.herokuapp.com request_id=c404b461-2695-4dba-8a5c-8f3104fefd4c fwd="172.91.236.224" dyno=web.1 connect=1ms service=1ms status=304 bytes=48 protocol=https
-2017-05-24T16:43:03.601450+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=nomster-dan-garcia.herokuapp.com request_id=f59bd0d2-7452-49f0-95e5-34c716e259db fwd="172.91.236.224" dyno=web.1 connect=1ms service=6ms status=304 bytes=48 protocol=https
-2017-05-24T16:43:23.228800+00:00 heroku[router]: at=info method=GET path="/?page=2" host=nomster-dan-garcia.herokuapp.com request_id=f583e16b-39c6-47c0-b757-b5ba4ae69f48 fwd="172.91.236.224" dyno=web.1 connect=1ms service=19ms status=200 bytes=4145 protocol=https
-2017-05-24T16:43:23.209544+00:00 app[web.1]: I, [2017-05-24T16:43:23.209446 #4]  INFO -- : [f583e16b-39c6-47c0-b757-b5ba4ae69f48] Started GET "/?page=2" for 172.91.236.224 at 2017-05-24 16:43:23 +0000
-2017-05-24T16:43:23.210921+00:00 app[web.1]: I, [2017-05-24T16:43:23.210847 #4]  INFO -- : [f583e16b-39c6-47c0-b757-b5ba4ae69f48] Processing by PlacesController#index as HTML
-2017-05-24T16:43:23.211008+00:00 app[web.1]: I, [2017-05-24T16:43:23.210947 #4]  INFO -- : [f583e16b-39c6-47c0-b757-b5ba4ae69f48]   Parameters: {"page"=>"2"}
-2017-05-24T16:43:23.214675+00:00 app[web.1]: D, [2017-05-24T16:43:23.214608 #4] DEBUG -- : [f583e16b-39c6-47c0-b757-b5ba4ae69f48]   [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" ORDER BY "places"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
-2017-05-24T16:43:23.215540+00:00 app[web.1]: I, [2017-05-24T16:43:23.215481 #4]  INFO -- : [f583e16b-39c6-47c0-b757-b5ba4ae69f48]   Rendering places/index.html.erb within layouts/application
-2017-05-24T16:43:23.217032+00:00 app[web.1]: D, [2017-05-24T16:43:23.216972 #4] DEBUG -- : [f583e16b-39c6-47c0-b757-b5ba4ae69f48]   [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 10]]
-2017-05-24T16:43:23.219309+00:00 app[web.1]: D, [2017-05-24T16:43:23.219255 #4] DEBUG -- : [f583e16b-39c6-47c0-b757-b5ba4ae69f48]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-24T16:43:23.220375+00:00 app[web.1]: D, [2017-05-24T16:43:23.220322 #4] DEBUG -- : [f583e16b-39c6-47c0-b757-b5ba4ae69f48]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-24T16:43:23.221289+00:00 app[web.1]: D, [2017-05-24T16:43:23.221233 #4] DEBUG -- : [f583e16b-39c6-47c0-b757-b5ba4ae69f48]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-24T16:43:23.222176+00:00 app[web.1]: D, [2017-05-24T16:43:23.222118 #4] DEBUG -- : [f583e16b-39c6-47c0-b757-b5ba4ae69f48]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-24T16:43:23.223278+00:00 app[web.1]: D, [2017-05-24T16:43:23.223142 #4] DEBUG -- : [f583e16b-39c6-47c0-b757-b5ba4ae69f48]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-2017-05-24T16:43:23.224406+00:00 app[web.1]: I, [2017-05-24T16:43:23.224354 #4]  INFO -- : [f583e16b-39c6-47c0-b757-b5ba4ae69f48]   Rendered places/index.html.erb within layouts/application (8.8ms)
-2017-05-24T16:43:23.225837+00:00 app[web.1]: I, [2017-05-24T16:43:23.225783 #4]  INFO -- : [f583e16b-39c6-47c0-b757-b5ba4ae69f48] Completed 200 OK in 15ms (Views: 8.4ms | ActiveRecord: 3.3ms)
-2017-05-24T16:47:47.320143+00:00 heroku[web.1]: Restarting
-2017-05-24T16:47:47.320739+00:00 heroku[web.1]: State changed from up to starting
-2017-05-24T16:47:47.949094+00:00 app[web.1]: - Gracefully stopping, waiting for requests to finish
-2017-05-24T16:47:47.949160+00:00 app[web.1]: === puma shutdown: 2017-05-24 16:47:47 +0000 ===
-2017-05-24T16:47:47.949164+00:00 app[web.1]: - Goodbye!
-2017-05-24T16:47:47.949223+00:00 app[web.1]: Exiting
-2017-05-24T16:47:47.938136+00:00 heroku[web.1]: Stopping all processes with SIGTERM
-2017-05-24T16:47:48.055865+00:00 heroku[web.1]: Process exited with status 0
-2017-05-24T16:47:51.085730+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 32305 -e production`
-2017-05-24T16:47:56.988431+00:00 app[web.1]: => Booting Puma
-2017-05-24T16:47:56.988462+00:00 app[web.1]: => Rails 5.0.3 application starting in production on http://0.0.0.0:32305
-2017-05-24T16:47:56.988463+00:00 app[web.1]: => Run `rails server -h` for more startup options
-2017-05-24T16:47:56.988467+00:00 app[web.1]: Puma starting in single mode...
-2017-05-24T16:47:56.988467+00:00 app[web.1]: * Version 3.8.2 (ruby 2.3.4-p301), codename: Sassy Salamander
-2017-05-24T16:47:56.988477+00:00 app[web.1]: * Min threads: 5, max threads: 5
-2017-05-24T16:47:56.988477+00:00 app[web.1]: * Environment: production
-2017-05-24T16:47:56.989534+00:00 app[web.1]: Use Ctrl-C to stop
-2017-05-24T16:47:56.988593+00:00 app[web.1]: * Listening on tcp://0.0.0.0:32305
-2017-05-24T16:47:57.199441+00:00 heroku[web.1]: State changed from starting to up
-2017-05-24T16:48:20.984163+00:00 heroku[run.9966]: Awaiting client
-2017-05-24T16:48:21.017278+00:00 heroku[run.9966]: Starting process with command `bundle exec rake db:migrate`
-2017-05-24T16:48:21.194691+00:00 heroku[run.9966]: State changed from starting to up
-2017-05-24T16:48:27.308546+00:00 heroku[run.9966]: State changed from up to complete
-2017-05-24T16:48:27.297313+00:00 heroku[run.9966]: Process exited with status 0
-2017-05-24T16:48:48.219084+00:00 heroku[web.1]: Restarting
-2017-05-24T16:48:48.219511+00:00 heroku[web.1]: State changed from up to starting
-2017-05-24T16:48:49.450174+00:00 heroku[web.1]: Stopping all processes with SIGTERM
-2017-05-24T16:48:49.502104+00:00 app[web.1]: - Gracefully stopping, waiting for requests to finish
-2017-05-24T16:48:49.502412+00:00 app[web.1]: - Goodbye!
-2017-05-24T16:48:49.502590+00:00 app[web.1]: Exiting
-2017-05-24T16:48:49.502380+00:00 app[web.1]: === puma shutdown: 2017-05-24 16:48:49 +0000 ===
-2017-05-24T16:48:49.939836+00:00 heroku[web.1]: Process exited with status 0
-2017-05-24T16:48:53.233372+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 48147 -e production`
+2017-05-24T17:22:09.529576+00:00 app[web.1]: D, [2017-05-24T17:22:09.529506 #4] DEBUG -- : [dd221178-8d5b-4fba-9d26-96128ac41a47]   [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:09.530727+00:00 app[web.1]: D, [2017-05-24T17:22:09.530663 #4] DEBUG -- : [dd221178-8d5b-4fba-9d26-96128ac41a47]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:09.531666+00:00 app[web.1]: D, [2017-05-24T17:22:09.531603 #4] DEBUG -- : [dd221178-8d5b-4fba-9d26-96128ac41a47]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:09.537035+00:00 app[web.1]: D, [2017-05-24T17:22:09.536975 #4] DEBUG -- : [dd221178-8d5b-4fba-9d26-96128ac41a47]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:09.532543+00:00 app[web.1]: D, [2017-05-24T17:22:09.532481 #4] DEBUG -- : [dd221178-8d5b-4fba-9d26-96128ac41a47]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:09.533476+00:00 app[web.1]: D, [2017-05-24T17:22:09.533407 #4] DEBUG -- : [dd221178-8d5b-4fba-9d26-96128ac41a47]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:09.535271+00:00 app[web.1]: D, [2017-05-24T17:22:09.535208 #4] DEBUG -- : [dd221178-8d5b-4fba-9d26-96128ac41a47]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:09.534384+00:00 app[web.1]: D, [2017-05-24T17:22:09.534322 #4] DEBUG -- : [dd221178-8d5b-4fba-9d26-96128ac41a47]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:09.536159+00:00 app[web.1]: D, [2017-05-24T17:22:09.536097 #4] DEBUG -- : [dd221178-8d5b-4fba-9d26-96128ac41a47]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:09.537918+00:00 app[web.1]: D, [2017-05-24T17:22:09.537854 #4] DEBUG -- : [dd221178-8d5b-4fba-9d26-96128ac41a47]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:09.540381+00:00 app[web.1]: D, [2017-05-24T17:22:09.540310 #4] DEBUG -- : [dd221178-8d5b-4fba-9d26-96128ac41a47]   [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "places"[0m
+2017-05-24T17:22:09.549675+00:00 app[web.1]: I, [2017-05-24T17:22:09.549601 #4]  INFO -- : [dd221178-8d5b-4fba-9d26-96128ac41a47]   Rendered places/index.html.erb within layouts/application (30.6ms)
+2017-05-24T17:22:09.554015+00:00 app[web.1]: D, [2017-05-24T17:22:09.553940 #4] DEBUG -- : [dd221178-8d5b-4fba-9d26-96128ac41a47]   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:09.555183+00:00 app[web.1]: I, [2017-05-24T17:22:09.555106 #4]  INFO -- : [dd221178-8d5b-4fba-9d26-96128ac41a47] Completed 200 OK in 43ms (Views: 29.6ms | ActiveRecord: 9.6ms)
+2017-05-24T17:22:09.557306+00:00 heroku[router]: at=info method=GET path="/" host=nomster-dan-garcia.herokuapp.com request_id=dd221178-8d5b-4fba-9d26-96128ac41a47 fwd="172.91.236.224" dyno=web.1 connect=0ms service=46ms status=200 bytes=5552 protocol=https
+2017-05-24T17:22:10.129031+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=nomster-dan-garcia.herokuapp.com request_id=b395ab9f-7bb2-4102-a831-c7bfc8cc38de fwd="172.91.236.224" dyno=web.1 connect=1ms service=1ms status=304 bytes=48 protocol=https
+2017-05-24T17:22:20.805819+00:00 app[web.1]: I, [2017-05-24T17:22:20.805730 #4]  INFO -- : [92438bac-b289-4925-87a8-bc4fe94a62d2] Started GET "/?page=2" for 172.91.236.224 at 2017-05-24 17:22:20 +0000
+2017-05-24T17:22:20.807381+00:00 app[web.1]: I, [2017-05-24T17:22:20.807317 #4]  INFO -- : [92438bac-b289-4925-87a8-bc4fe94a62d2] Processing by PlacesController#index as HTML
+2017-05-24T17:22:20.807484+00:00 app[web.1]: I, [2017-05-24T17:22:20.807416 #4]  INFO -- : [92438bac-b289-4925-87a8-bc4fe94a62d2]   Parameters: {"page"=>"2"}
+2017-05-24T17:22:20.811773+00:00 app[web.1]: D, [2017-05-24T17:22:20.811697 #4] DEBUG -- : [92438bac-b289-4925-87a8-bc4fe94a62d2]   [1m[36mPlace Load (1.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" ORDER BY "places"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+2017-05-24T17:22:20.812633+00:00 app[web.1]: I, [2017-05-24T17:22:20.812559 #4]  INFO -- : [92438bac-b289-4925-87a8-bc4fe94a62d2]   Rendering places/index.html.erb within layouts/application
+2017-05-24T17:22:20.814935+00:00 app[web.1]: D, [2017-05-24T17:22:20.814863 #4] DEBUG -- : [92438bac-b289-4925-87a8-bc4fe94a62d2]   [1m[36mPlace Load (1.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 10]]
+2017-05-24T17:22:20.818500+00:00 app[web.1]: D, [2017-05-24T17:22:20.818423 #4] DEBUG -- : [92438bac-b289-4925-87a8-bc4fe94a62d2]   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:20.820380+00:00 app[web.1]: D, [2017-05-24T17:22:20.820309 #4] DEBUG -- : [92438bac-b289-4925-87a8-bc4fe94a62d2]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:20.822001+00:00 app[web.1]: D, [2017-05-24T17:22:20.821927 #4] DEBUG -- : [92438bac-b289-4925-87a8-bc4fe94a62d2]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:20.823528+00:00 app[web.1]: D, [2017-05-24T17:22:20.823438 #4] DEBUG -- : [92438bac-b289-4925-87a8-bc4fe94a62d2]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:20.825094+00:00 app[web.1]: D, [2017-05-24T17:22:20.825015 #4] DEBUG -- : [92438bac-b289-4925-87a8-bc4fe94a62d2]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:20.826641+00:00 app[web.1]: D, [2017-05-24T17:22:20.826540 #4] DEBUG -- : [92438bac-b289-4925-87a8-bc4fe94a62d2]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:20.828267+00:00 app[web.1]: I, [2017-05-24T17:22:20.828199 #4]  INFO -- : [92438bac-b289-4925-87a8-bc4fe94a62d2]   Rendered places/index.html.erb within layouts/application (15.5ms)
+2017-05-24T17:22:20.831601+00:00 app[web.1]: D, [2017-05-24T17:22:20.831520 #4] DEBUG -- : [92438bac-b289-4925-87a8-bc4fe94a62d2]   [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-24T17:22:20.832588+00:00 app[web.1]: I, [2017-05-24T17:22:20.832522 #4]  INFO -- : [92438bac-b289-4925-87a8-bc4fe94a62d2] Completed 200 OK in 25ms (Views: 15.1ms | ActiveRecord: 6.5ms)
+2017-05-24T17:22:20.834728+00:00 heroku[router]: at=info method=GET path="/?page=2" host=nomster-dan-garcia.herokuapp.com request_id=92438bac-b289-4925-87a8-bc4fe94a62d2 fwd="172.91.236.224" dyno=web.1 connect=0ms service=29ms status=200 bytes=4426 protocol=https
+2017-05-24T17:27:07.066445+00:00 heroku[run.9693]: Awaiting client
+2017-05-24T17:27:07.102629+00:00 heroku[run.9693]: Starting process with command `bin/rails console`
+2017-05-24T17:27:07.305423+00:00 heroku[run.9693]: State changed from starting to up
+2017-05-24T17:27:25.636041+00:00 heroku[run.9693]: Process exited with status 0
+2017-05-24T17:27:25.650593+00:00 heroku[run.9693]: State changed from up to complete
+2017-05-24T17:56:15.239831+00:00 heroku[web.1]: Idling
+2017-05-24T17:56:15.240446+00:00 heroku[web.1]: State changed from up to down
+2017-05-24T17:56:15.865500+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2017-05-24T17:56:15.886145+00:00 app[web.1]: - Gracefully stopping, waiting for requests to finish
+2017-05-24T17:56:15.889324+00:00 app[web.1]: === puma shutdown: 2017-05-24 17:56:15 +0000 ===
+2017-05-24T17:56:15.889358+00:00 app[web.1]: - Goodbye!
+2017-05-24T17:56:15.890363+00:00 app[web.1]: Exiting
+2017-05-24T17:56:16.142969+00:00 heroku[web.1]: Process exited with status 0
+2017-05-25T01:44:06.309836+00:00 heroku[web.1]: Unidling
+2017-05-25T01:44:06.310071+00:00 heroku[web.1]: State changed from down to starting
+2017-05-25T01:44:10.579533+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 36334 -e production`
+2017-05-25T01:44:17.949873+00:00 app[web.1]: => Booting Puma
+2017-05-25T01:44:17.949909+00:00 app[web.1]: => Rails 5.0.3 application starting in production on http://0.0.0.0:36334
+2017-05-25T01:44:17.949917+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2017-05-25T01:44:17.949918+00:00 app[web.1]: Puma starting in single mode...
+2017-05-25T01:44:17.949919+00:00 app[web.1]: * Version 3.8.2 (ruby 2.3.4-p301), codename: Sassy Salamander
+2017-05-25T01:44:17.949926+00:00 app[web.1]: * Min threads: 5, max threads: 5
+2017-05-25T01:44:17.949927+00:00 app[web.1]: * Environment: production
+2017-05-25T01:44:17.949932+00:00 app[web.1]: * Listening on tcp://0.0.0.0:36334
+2017-05-25T01:44:17.950246+00:00 app[web.1]: Use Ctrl-C to stop
+2017-05-25T01:44:18.353463+00:00 heroku[web.1]: State changed from starting to up
+2017-05-25T01:44:18.472664+00:00 app[web.1]: I, [2017-05-25T01:44:18.472548 #4]  INFO -- : [fe37b0a5-4213-4db8-8e44-8e8f3a1962f2] Started GET "/?page=2" for 172.91.236.224 at 2017-05-25 01:44:18 +0000
+2017-05-25T01:44:18.490143+00:00 app[web.1]: I, [2017-05-25T01:44:18.490015 #4]  INFO -- : [fe37b0a5-4213-4db8-8e44-8e8f3a1962f2] Processing by PlacesController#index as HTML
+2017-05-25T01:44:18.490216+00:00 app[web.1]: I, [2017-05-25T01:44:18.490144 #4]  INFO -- : [fe37b0a5-4213-4db8-8e44-8e8f3a1962f2]   Parameters: {"page"=>"2"}
+2017-05-25T01:44:18.614566+00:00 app[web.1]: D, [2017-05-25T01:44:18.614433 #4] DEBUG -- : [fe37b0a5-4213-4db8-8e44-8e8f3a1962f2]   [1m[36mPlace Load (1.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" ORDER BY "places"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+2017-05-25T01:44:18.666837+00:00 app[web.1]: I, [2017-05-25T01:44:18.666709 #4]  INFO -- : [fe37b0a5-4213-4db8-8e44-8e8f3a1962f2]   Rendering places/index.html.erb within layouts/application
+2017-05-25T01:44:18.671951+00:00 app[web.1]: D, [2017-05-25T01:44:18.671878 #4] DEBUG -- : [fe37b0a5-4213-4db8-8e44-8e8f3a1962f2]   [1m[36mPlace Load (1.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 10]]
+2017-05-25T01:44:18.715532+00:00 app[web.1]: D, [2017-05-25T01:44:18.715401 #4] DEBUG -- : [fe37b0a5-4213-4db8-8e44-8e8f3a1962f2]   [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-25T01:44:18.733004+00:00 app[web.1]: D, [2017-05-25T01:44:18.732887 #4] DEBUG -- : [fe37b0a5-4213-4db8-8e44-8e8f3a1962f2]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-25T01:44:18.734341+00:00 app[web.1]: D, [2017-05-25T01:44:18.734272 #4] DEBUG -- : [fe37b0a5-4213-4db8-8e44-8e8f3a1962f2]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-25T01:44:18.735729+00:00 app[web.1]: D, [2017-05-25T01:44:18.735656 #4] DEBUG -- : [fe37b0a5-4213-4db8-8e44-8e8f3a1962f2]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-25T01:44:18.736990+00:00 app[web.1]: D, [2017-05-25T01:44:18.736918 #4] DEBUG -- : [fe37b0a5-4213-4db8-8e44-8e8f3a1962f2]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-25T01:44:18.738304+00:00 app[web.1]: D, [2017-05-25T01:44:18.738234 #4] DEBUG -- : [fe37b0a5-4213-4db8-8e44-8e8f3a1962f2]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-25T01:44:18.756344+00:00 app[web.1]: I, [2017-05-25T01:44:18.754868 #4]  INFO -- : [fe37b0a5-4213-4db8-8e44-8e8f3a1962f2]   Rendered places/index.html.erb within layouts/application (87.9ms)
+2017-05-25T01:44:18.762829+00:00 app[web.1]: D, [2017-05-25T01:44:18.762737 #4] DEBUG -- : [fe37b0a5-4213-4db8-8e44-8e8f3a1962f2]   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+2017-05-25T01:44:18.763887+00:00 app[web.1]: I, [2017-05-25T01:44:18.763811 #4]  INFO -- : [fe37b0a5-4213-4db8-8e44-8e8f3a1962f2] Completed 200 OK in 273ms (Views: 96.9ms | ActiveRecord: 49.3ms)
+2017-05-25T01:44:18.767451+00:00 heroku[router]: at=info method=GET path="/?page=2" host=nomster-dan-garcia.herokuapp.com request_id=fe37b0a5-4213-4db8-8e44-8e8f3a1962f2 fwd="172.91.236.224" dyno=web.1 connect=1ms service=299ms status=200 bytes=4426 protocol=https
+2017-05-25T01:44:18.904920+00:00 heroku[router]: at=info method=GET path="/assets/application-5ef3b73a0cf1e2dc8b93e515ccb268f07efc53bb6fbf597016f577daf1f2fa03.css" host=nomster-dan-garcia.herokuapp.com request_id=127aa31f-2a4e-42c5-9120-1dae7e6926bd fwd="172.91.236.224" dyno=web.1 connect=1ms service=11ms status=200 bytes=27531 protocol=https
+2017-05-25T01:44:19.091972+00:00 heroku[router]: at=info method=GET path="/assets/application-2811c92dd1da99b11664385ef2828196ffe5f555b33f8480f765d520bfd9a169.js" host=nomster-dan-garcia.herokuapp.com request_id=de5b3620-5423-4445-ba42-d9e21aef77ee fwd="172.91.236.224" dyno=web.1 connect=1ms service=6ms status=200 bytes=65081 protocol=https
+2017-05-25T01:44:19.451016+00:00 heroku[router]: at=info method=GET path="/assets/cartographer-5fc0674ab5bc35c0f71dd40cce8c92414ecb7977bba0cc64b7c78cb435f5f0bf.png" host=nomster-dan-garcia.herokuapp.com request_id=5d60b9be-852c-440c-8360-80efc6a87d4d fwd="172.91.236.224" dyno=web.1 connect=1ms service=7ms status=200 bytes=89085 protocol=https
+2017-05-25T01:44:19.444906+00:00 heroku[router]: at=info method=GET path="/assets/crossword-2f23f323330dd47e39b3af4892097e56ef0cabf5980e4c2ed794f58d4f629437.png" host=nomster-dan-garcia.herokuapp.com request_id=a89dab1a-e2f6-4755-820d-5127f6aac59a fwd="172.91.236.224" dyno=web.1 connect=1ms service=4ms status=200 bytes=43826 protocol=https
+2017-05-25T01:44:19.537501+00:00 heroku[router]: at=info method=GET path="/assets/chunkfive-webfont-17f6065603d4d222d2febdfc1d03a1714fb558cdc9ba67d6d3185c4f3a3dab4f.woff2" host=nomster-dan-garcia.herokuapp.com request_id=38fd35da-f145-4eb0-9dde-28674e8b2d37 fwd="172.91.236.224" dyno=web.1 connect=1ms service=4ms status=200 bytes=16745 protocol=https
+2017-05-25T01:44:19.637302+00:00 heroku[router]: at=info method=GET path="/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" host=nomster-dan-garcia.herokuapp.com request_id=63748dcf-e707-4583-a2bf-176f587ae7b5 fwd="172.91.236.224" dyno=web.1 connect=1ms service=8ms status=200 bytes=77305 protocol=https
+2017-05-25T01:44:20.353878+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=nomster-dan-garcia.herokuapp.com request_id=579777e7-a872-4876-a158-69a191673031 fwd="172.91.236.224" dyno=web.1 connect=1ms service=2ms status=200 bytes=143 protocol=https
+2017-05-25T02:17:17.411985+00:00 heroku[web.1]: Idling
+2017-05-25T02:17:17.412758+00:00 heroku[web.1]: State changed from up to down
+2017-05-25T02:17:18.206020+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2017-05-25T02:17:18.216344+00:00 app[web.1]: - Gracefully stopping, waiting for requests to finish
+2017-05-25T02:17:18.216353+00:00 app[web.1]: === puma shutdown: 2017-05-25 02:17:18 +0000 ===
+2017-05-25T02:17:18.216354+00:00 app[web.1]: - Goodbye!
+2017-05-25T02:17:18.216355+00:00 app[web.1]: Exiting
+2017-05-25T02:17:18.370767+00:00 heroku[web.1]: Process exited with status 0
+2017-05-25T05:52:52.688535+00:00 heroku[web.1]: State changed from down to starting
+2017-05-25T05:52:56.160500+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 45534 -e production`
+2017-05-25T05:53:00.554668+00:00 app[web.1]: => Booting Puma
+2017-05-25T05:53:00.554687+00:00 app[web.1]: => Rails 5.0.3 application starting in production on http://0.0.0.0:45534
+2017-05-25T05:53:00.554688+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2017-05-25T05:53:00.554689+00:00 app[web.1]: Puma starting in single mode...
+2017-05-25T05:53:00.554694+00:00 app[web.1]: * Version 3.8.2 (ruby 2.3.4-p301), codename: Sassy Salamander
+2017-05-25T05:53:00.554695+00:00 app[web.1]: * Min threads: 5, max threads: 5
+2017-05-25T05:53:00.554695+00:00 app[web.1]: * Environment: production
+2017-05-25T05:53:00.554804+00:00 app[web.1]: * Listening on tcp://0.0.0.0:45534
+2017-05-25T05:53:00.555179+00:00 app[web.1]: Use Ctrl-C to stop
+2017-05-25T05:53:01.016139+00:00 heroku[web.1]: State changed from starting to up
