@@ -1,33 +1,3 @@
-2017-05-26T02:20:33.917824+00:00 app[web.1]: I, [2017-05-26T02:20:33.917695 #4]  INFO -- : [33af0901-fe7f-46c6-b2c4-491fe10af2b0] Started GET "/places/15" for 172.91.236.224 at 2017-05-26 02:20:33 +0000
-2017-05-26T02:20:33.920165+00:00 app[web.1]: I, [2017-05-26T02:20:33.920063 #4]  INFO -- : [33af0901-fe7f-46c6-b2c4-491fe10af2b0] Processing by PlacesController#show as HTML
-2017-05-26T02:20:33.920315+00:00 app[web.1]: I, [2017-05-26T02:20:33.920205 #4]  INFO -- : [33af0901-fe7f-46c6-b2c4-491fe10af2b0]   Parameters: {"id"=>"15"}
-2017-05-26T02:20:33.924539+00:00 app[web.1]: D, [2017-05-26T02:20:33.924446 #4] DEBUG -- : [33af0901-fe7f-46c6-b2c4-491fe10af2b0]   [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
-2017-05-26T02:20:33.936588+00:00 app[web.1]: I, [2017-05-26T02:20:33.936471 #4]  INFO -- : [33af0901-fe7f-46c6-b2c4-491fe10af2b0]   Rendering places/show.html.erb within layouts/application
-2017-05-26T02:20:33.956134+00:00 app[web.1]: I, [2017-05-26T02:20:33.956026 #4]  INFO -- : [33af0901-fe7f-46c6-b2c4-491fe10af2b0]   Rendered places/show.html.erb within layouts/application (19.3ms)
-2017-05-26T02:20:33.957223+00:00 app[web.1]: I, [2017-05-26T02:20:33.957168 #4]  INFO -- : [33af0901-fe7f-46c6-b2c4-491fe10af2b0] Completed 200 OK in 37ms (Views: 21.1ms | ActiveRecord: 3.7ms)
-2017-05-26T02:20:34.089616+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=nomster-dan-garcia.herokuapp.com request_id=23198ef9-120d-4c9b-beff-b63ea4835511 fwd="172.91.236.224" dyno=web.1 connect=0ms service=4ms status=304 bytes=48 protocol=https
-2017-05-26T02:20:41.371108+00:00 heroku[router]: at=info method=POST path="/places/15/comments" host=nomster-dan-garcia.herokuapp.com request_id=fd75f1f0-d323-4e84-b606-7aceb20e14ea fwd="172.91.236.224" dyno=web.1 connect=0ms service=12ms status=302 bytes=903 protocol=https
-2017-05-26T02:20:41.364164+00:00 app[web.1]: I, [2017-05-26T02:20:41.364080 #4]  INFO -- : [fd75f1f0-d323-4e84-b606-7aceb20e14ea] Started POST "/places/15/comments" for 172.91.236.224 at 2017-05-26 02:20:41 +0000
-2017-05-26T02:20:41.365656+00:00 app[web.1]: I, [2017-05-26T02:20:41.365583 #4]  INFO -- : [fd75f1f0-d323-4e84-b606-7aceb20e14ea] Processing by CommentsController#create as HTML
-2017-05-26T02:20:41.365770+00:00 app[web.1]: I, [2017-05-26T02:20:41.365693 #4]  INFO -- : [fd75f1f0-d323-4e84-b606-7aceb20e14ea]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"u7kL2VKxJG3dYvHgZWxga89SlTBbpa8x7f9iAVUNOVG9B023DN2QvOL+RwXvbKH+qGXnDfEsOJ+zp2N4009Q7Q==", "comment"=>{"message"=>"", "rating"=>""}, "commit"=>"Add a Comment", "place_id"=>"15"}
-2017-05-26T02:20:41.367110+00:00 app[web.1]: I, [2017-05-26T02:20:41.367038 #4]  INFO -- : [fd75f1f0-d323-4e84-b606-7aceb20e14ea] Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
-2017-05-26T02:20:41.463353+00:00 app[web.1]: I, [2017-05-26T02:20:41.463238 #4]  INFO -- : [10e77c44-c6bc-411a-92ed-5a87dcfe1b0a] Started GET "/users/sign_in" for 172.91.236.224 at 2017-05-26 02:20:41 +0000
-2017-05-26T02:20:41.465632+00:00 app[web.1]: I, [2017-05-26T02:20:41.465542 #4]  INFO -- : [10e77c44-c6bc-411a-92ed-5a87dcfe1b0a] Processing by Devise::SessionsController#new as HTML
-2017-05-26T02:20:41.471851+00:00 app[web.1]: I, [2017-05-26T02:20:41.471753 #4]  INFO -- : [10e77c44-c6bc-411a-92ed-5a87dcfe1b0a]   Rendering devise/sessions/new.html.erb within layouts/application
-2017-05-26T02:20:41.497143+00:00 app[web.1]: I, [2017-05-26T02:20:41.497009 #4]  INFO -- : [10e77c44-c6bc-411a-92ed-5a87dcfe1b0a]   Rendered devise/shared/_links.html.erb (2.9ms)
-2017-05-26T02:20:41.497285+00:00 app[web.1]: I, [2017-05-26T02:20:41.497206 #4]  INFO -- : [10e77c44-c6bc-411a-92ed-5a87dcfe1b0a]   Rendered devise/sessions/new.html.erb within layouts/application (25.3ms)
-2017-05-26T02:20:41.499333+00:00 app[web.1]: I, [2017-05-26T02:20:41.499248 #4]  INFO -- : [10e77c44-c6bc-411a-92ed-5a87dcfe1b0a] Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 0.0ms)
-2017-05-26T02:20:41.500921+00:00 heroku[router]: at=info method=GET path="/users/sign_in" host=nomster-dan-garcia.herokuapp.com request_id=10e77c44-c6bc-411a-92ed-5a87dcfe1b0a fwd="172.91.236.224" dyno=web.1 connect=0ms service=39ms status=200 bytes=3759 protocol=https
-2017-05-26T02:20:41.623672+00:00 heroku[router]: at=info method=GET path="/assets/application-a4567c2ab272e632af4d0e7705d13a7ba75d5ff36094843b6564c5bc28050312.js" host=nomster-dan-garcia.herokuapp.com request_id=c4cdb482-7de4-458c-868b-9c404b221805 fwd="172.91.236.224" dyno=web.1 connect=1ms service=1ms status=304 bytes=48 protocol=https
-2017-05-26T02:20:42.033129+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=nomster-dan-garcia.herokuapp.com request_id=68bb2339-8776-46c6-a705-3073d5fb0d60 fwd="172.91.236.224" dyno=web.1 connect=0ms service=3ms status=304 bytes=48 protocol=https
-2017-05-26T02:20:53.108245+00:00 app[web.1]: I, [2017-05-26T02:20:53.108172 #4]  INFO -- : [c84696b7-6899-41f4-9899-0e1c20ff7085] Processing by Devise::SessionsController#create as HTML
-2017-05-26T02:20:53.107206+00:00 app[web.1]: I, [2017-05-26T02:20:53.107124 #4]  INFO -- : [c84696b7-6899-41f4-9899-0e1c20ff7085] Started POST "/users/sign_in" for 172.91.236.224 at 2017-05-26 02:20:53 +0000
-2017-05-26T02:20:53.108312+00:00 app[web.1]: I, [2017-05-26T02:20:53.108260 #4]  INFO -- : [c84696b7-6899-41f4-9899-0e1c20ff7085]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"05IPZSwcexVyGnoXPNW2/0ReSR0MoYg55lfBUPmTY+xCzsWIHP5Lzu2dgMEpip8/4L7J3ho/8Gr9HdJ+8vhbSw==", "user"=>{"email"=>"DanGx@outlook.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
-2017-05-26T02:20:53.112579+00:00 app[web.1]: D, [2017-05-26T02:20:53.112500 #4] DEBUG -- : [c84696b7-6899-41f4-9899-0e1c20ff7085]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "dangx@outlook.com"], ["LIMIT", 1]]
-2017-05-26T02:20:53.275799+00:00 app[web.1]: I, [2017-05-26T02:20:53.275721 #4]  INFO -- : [c84696b7-6899-41f4-9899-0e1c20ff7085] Redirected to https://nomster-dan-garcia.herokuapp.com/
-2017-05-26T02:20:53.264344+00:00 app[web.1]: D, [2017-05-26T02:20:53.264218 #4] DEBUG -- : [c84696b7-6899-41f4-9899-0e1c20ff7085]   [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
-2017-05-26T02:20:53.269468+00:00 app[web.1]: D, [2017-05-26T02:20:53.269384 #4] DEBUG -- : [c84696b7-6899-41f4-9899-0e1c20ff7085]   [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2017-05-26 02:20:53.262603"], ["last_sign_in_at", "2017-05-25 05:58:00.117151"], ["sign_in_count", 8], ["updated_at", "2017-05-26 02:20:53.265742"], ["id", 1]]
-2017-05-26T02:20:53.271726+00:00 app[web.1]: D, [2017-05-26T02:20:53.271649 #4] DEBUG -- : [c84696b7-6899-41f4-9899-0e1c20ff7085]   [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
 2017-05-26T02:20:53.276061+00:00 app[web.1]: I, [2017-05-26T02:20:53.275990 #4]  INFO -- : [c84696b7-6899-41f4-9899-0e1c20ff7085] Completed 302 Found in 168ms (ActiveRecord: 4.4ms)
 2017-05-26T02:20:53.277518+00:00 heroku[router]: at=info method=POST path="/users/sign_in" host=nomster-dan-garcia.herokuapp.com request_id=c84696b7-6899-41f4-9899-0e1c20ff7085 fwd="172.91.236.224" dyno=web.1 connect=0ms service=171ms status=302 bytes=940 protocol=https
 2017-05-26T02:20:53.402354+00:00 heroku[router]: at=info method=GET path="/" host=nomster-dan-garcia.herokuapp.com request_id=a663426a-42c5-4131-9248-fa3c425d3238 fwd="172.91.236.224" dyno=web.1 connect=1ms service=33ms status=200 bytes=5614 protocol=https
@@ -99,3 +69,33 @@
 2017-05-26T02:36:03.623646+00:00 app[web.1]: Exiting
 2017-05-26T02:36:03.786990+00:00 heroku[web.1]: Process exited with status 0
 2017-05-26T02:36:09.275763+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 54779 -e production`
+2017-05-26T02:36:26.337949+00:00 app[web.1]: => Booting Puma
+2017-05-26T02:36:26.337985+00:00 app[web.1]: => Rails 5.0.3 application starting in production on http://0.0.0.0:54779
+2017-05-26T02:36:26.337986+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2017-05-26T02:36:26.338006+00:00 app[web.1]: Puma starting in single mode...
+2017-05-26T02:36:26.338056+00:00 app[web.1]: * Version 3.8.2 (ruby 2.3.4-p301), codename: Sassy Salamander
+2017-05-26T02:36:26.338098+00:00 app[web.1]: * Min threads: 5, max threads: 5
+2017-05-26T02:36:26.338281+00:00 app[web.1]: * Listening on tcp://0.0.0.0:54779
+2017-05-26T02:36:26.338639+00:00 app[web.1]: Use Ctrl-C to stop
+2017-05-26T02:36:26.338134+00:00 app[web.1]: * Environment: production
+2017-05-26T02:36:26.547229+00:00 heroku[web.1]: State changed from starting to up
+2017-05-26T03:10:26.037793+00:00 heroku[web.1]: Idling
+2017-05-26T03:10:26.038357+00:00 heroku[web.1]: State changed from up to down
+2017-05-26T03:10:26.925992+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2017-05-26T03:10:26.959811+00:00 app[web.1]: === puma shutdown: 2017-05-26 03:10:26 +0000 ===
+2017-05-26T03:10:26.959844+00:00 app[web.1]: - Goodbye!
+2017-05-26T03:10:26.960012+00:00 app[web.1]: Exiting
+2017-05-26T03:10:26.951647+00:00 app[web.1]: - Gracefully stopping, waiting for requests to finish
+2017-05-26T03:10:27.975823+00:00 heroku[web.1]: Process exited with status 0
+2017-05-26T03:49:26.139762+00:00 heroku[web.1]: State changed from down to starting
+2017-05-26T03:49:29.111625+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 15688 -e production`
+2017-05-26T03:49:33.722944+00:00 app[web.1]: => Booting Puma
+2017-05-26T03:49:33.722961+00:00 app[web.1]: => Rails 5.0.3 application starting in production on http://0.0.0.0:15688
+2017-05-26T03:49:33.722962+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2017-05-26T03:49:33.722963+00:00 app[web.1]: Puma starting in single mode...
+2017-05-26T03:49:33.722968+00:00 app[web.1]: * Version 3.8.2 (ruby 2.3.4-p301), codename: Sassy Salamander
+2017-05-26T03:49:33.722969+00:00 app[web.1]: * Min threads: 5, max threads: 5
+2017-05-26T03:49:33.723015+00:00 app[web.1]: * Environment: production
+2017-05-26T03:49:33.723164+00:00 app[web.1]: * Listening on tcp://0.0.0.0:15688
+2017-05-26T03:49:33.723542+00:00 app[web.1]: Use Ctrl-C to stop
+2017-05-26T03:49:34.221466+00:00 heroku[web.1]: State changed from starting to up
