@@ -1,67 +1,99 @@
 <div class="booyah-box col-10 offset-1">
   <!-- ************************* Display Place ******************************* -->
+
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
   <br/><br/>
   <p><%= @place.description %></p>
   
+   <!-- ********************** Display Map ************************************ -->    
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    /*#map {
+      height: 100%;
+    }*/
+    /* Optional: Makes the sample page fill the window. */
+    /*html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }*/
+  </style>
+    
+    
+  <% if @place.latitude.present? && @place.longitude.present? %>
+  <script>
+    function initMap() {
+      var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: myLatLng
+      });
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Hello World!'
+      });
+    }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASb92qdScp7gMfCRqHr1Tp_DxG8DPvnO0&callback=initMap">
+  </script>
+  <div id="map"></div>  
+  <% end %>  <!-- END if @place.latitude.present... -->
   
-   <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      /*#map {
-        height: 100%;
-      }*/
-      /* Optional: Makes the sample page fill the window. */
-      /*html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }*/
-    </style>
+  <br />
+  
+  
+  
+  
+  
+  
+
+  <div class="row add-photos-heading">
+    <div class="col-12">
+      <!-- ****************** Display Heading  for Photos ******************** -->
+
+      <h1 class="float-left">Photos</h1>
+      <!-- ****************** Display Edit and Destroy (Delete) buttons for Place ********* -->
+      <div class="float-right"> 
+        <% if current_user && current_user == @place.user %>
     
-    
-  <!-- ********************** Display Map ************************************ -->    
-    <% if @place.latitude.present? && @place.longitude.present? %>
-    <script>
-
-      function initMap() {
-        var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
-
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
-          center: myLatLng
-        });
-
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: 'Hello World!'
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASb92qdScp7gMfCRqHr1Tp_DxG8DPvnO0&callback=initMap">
-    </script>
-
-    <div id="map"></div>  
-    <% end %>
-    <br />
-  <!-- ****************** Display Edit and Destroy buttons for Place ********* -->
-  <div class="float-right">
-    <% if current_user && current_user == @place.user %>
-      <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
-      <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'},class: 'btn btn-danger' %>
-    <% end %>
+          <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
+          <%= link_to 'Delete', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'},class: 'btn btn-danger' %>
+        <% end %>
+      </div> <!-- END div class="float-right" -->
+      <!-- ****************** Display Modal Trigger for Photos ******************** -->
+      <div class="float-right">  
+        <button type="button" class="btn btn-primary modal-trigger float-right" data-toggle="modal" data-target="#myPhotoModal">
+        Add a Photo
+        </button>
+      </div> <!-- END div class="float-right" -->
+    </div>
   </div>
+  
+
+  <!-- ****************** Display Photos and Captions ************************ -->
+  <!-- <h1>Photos</h1> -->
+  <% @place.photos.each do |photo| %>	
+    <div>
+  	<%= image_tag photo.picture, width:600 %>
+        <b><%= photo.caption%></b> 
+    </div>
+  <% end %>
+
+
+</div>	<!-- END <div class="booyah-box  *** *** *** *** *** *** *** *** *** -->
+
+<div class="clear"></div>
 
 
 
-  <br/><br/>
 
 
 
-
+ <br/><br/>
 
   <!-- ********** Diplay Modal Pop Up Box for Entering a Photo ********** -->
   <!-- Modal popup for photos -->
@@ -72,13 +104,13 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
-          <h4 class="modal-title" id="myModalLabel">Add a photo</h4>
+          <h4 class="modal-title" id="myModalLabel">Add Photo</h4>
         </div>
         <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
           <div class="modal-body">
             <%= f.input :caption %>
             <%= f.input :picture %>
-          </div>
+          </div>  <!-- END div class="modal-body" -->
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             <%= f.submit "Add Photo", class: 'btn btn-primary' %>
@@ -88,32 +120,6 @@
     </div>
   </div>
 
-
-
-
-  <!-- ****************** Display Heading  and Modal Trigger for Photos ******************** -->
-  <h1 class="float-left">Photos</h1>
-  <!-- Button trigger  Photo modal -->
-  <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myPhotoModal">
-    Add a Photo
-  </button>
-
-
-
-
-  <!-- ****************** Display Photos and Captions ************************ -->
-  <div class="clear"></div>
-  <!-- <h1>Photos</h1> -->
-  <% @place.photos.each do |photo| %>	
-    <div>
-  	<%= image_tag photo.picture %>
-        <b><%= photo.caption%></b> 
-    </div>
-  <% end %>
-
-
-</div>	<!-- END <div class="booyah-box -->
-<div class="clear"></div>
 
 
 
@@ -145,6 +151,8 @@
   </div>
 </div> <!-- end class = "modal fade" id = "myCommentModal"...-->
 
+
+
 <!-- *********** Display Heading and Modal Trigger for Comments ****************** -->
 <div class="col-10 offset-1">
   <h1 class="float-left">Comments</h1>
@@ -174,7 +182,7 @@
 </div>
 
 
-
-
+<!-- ********** Move the last comment off of the bottom of the page a little ********** -->
+<br/><br/>
 
 

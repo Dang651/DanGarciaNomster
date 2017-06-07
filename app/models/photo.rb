@@ -1,6 +1,4 @@
-class Photo < ActiveRecord::Base
-#class Photo < ApplicationRecord
-  # require 'carrierwave/orm/activerecord'
+class Photo < ApplicationRecord
   belongs_to :place
   mount_uploader :picture, PictureUploader
   #mount_uploader :picture, ::PictureUploader
